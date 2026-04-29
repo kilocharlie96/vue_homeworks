@@ -10,7 +10,7 @@
     <div id="app">
         <h1>Subscribe to our weekly Newsletter</h1>
 
-        <form @keydown.enter="add">
+        <form @submit.prevent="add" @keydown.escape="clear">
             <input type="text" v-model="newEmail" placeholder="Email address" ref="new">
             <a href="#" @click="add">Subscribe</a>
         </form>
@@ -45,6 +45,9 @@
                     this.newEmail = ''
 
                     this.$refs.new.focus()
+                },
+                clear() {
+                    this.newEmail = ''
                 }
             },
         }).mount('#app')
