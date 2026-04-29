@@ -12,14 +12,15 @@
 
         <form @submit.prevent="add" @keydown.escape="clear">
             <input type="text" v-model="newEmail" placeholder="Email address" ref="new">
-            <a href="#" @click="add">Subscribe</a>
+            <a class="subscribe" @click.prevent="add">Subscribe</a>
         </form>
 
         <h2>List of registered emails:</h2>
 
         <ul>
             <li v-for="email in emails" :key="email.id">
-                {{ email }}
+                <div class="email-item">{{ email }}</div>
+                <a class="remove" @click.prevent="remove(email)">x</a>
             </li>
         </ul>
     </div>
@@ -48,6 +49,10 @@
                 },
                 clear() {
                     this.newEmail = ''
+                },
+                remove(email) {
+                    this.emails = this.emails.filter(item => item !== email)
+                    
                 }
             },
         }).mount('#app')

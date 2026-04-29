@@ -5,15 +5,18 @@
     text-align: center;
 }
 
-form, a {
+form, a, li {
     border-radius: 2rem;
     padding: 0.3rem;
+}
+
+form, li {
+    border: 1px solid lightgray;
 }
 
 form {
     width: fit-content;
     margin: 0 auto;
-    border: 1px solid lightgray;
     padding-right: 0.1rem;
 }
 
@@ -21,16 +24,38 @@ input {
     border: none;
 }
 
+a {
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+a.subscribe {
+    background-color: green;
+}
+
+a.remove {
+    background-color: red;
+    width: 7%;
+    display: inline-block;
+    font-weight: bold;
+}
+
 input:focus{
     outline: none
 }
 
-a {
-    color: white;
-    text-decoration: none;
-    background-color: seagreen;
-}
 
 ul {
     list-style: none;
+}
+
+li {
+    width: 30%;
+    margin: 0 auto;
+}
+
+.email-item {
+    width: 90%;
+    display: inline-block;
 }
