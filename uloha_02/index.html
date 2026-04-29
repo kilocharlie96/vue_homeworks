@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Úloha 02</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div id="app">
+        <h1>Subscribe to our weekly Newsletter</h1>
+
+        <form @keydown.enter="add">
+            <input type="text" v-model="newEmail" placeholder="Email address" ref="new">
+            <a href="#" @click="add">Subscribe</a>
+        </form>
+
+        <h2>List of registered emails:</h2>
+
+        <ul>
+            <li v-for="email in emails" :key="email.id">
+                {{ email }}
+            </li>
+        </ul>
+    </div>
+
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
+    <script>
+        const { createApp } = Vue
+
+        createApp({
+            data() {
+                return {
+                    newEmail: '',
+                    emails: []
+                }
+            },
+            methods: {
+                add() {
+                    if (!this.newEmail) return
+
+                    this.emails.push(this.newEmail)
+
+                    this.newEmail = ''
+
+                    this.$refs.new.focus()
+                }
+            },
+        }).mount('#app')
+</script>
+
+</body>
+</html>
