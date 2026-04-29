@@ -1,0 +1,19 @@
+a; Z formuláru do zoznamu
+
+    Sprav si formulár. 
+
+    A teraz po kliknutí na gomb, pridaj text z formuláru do zoznamu.
+
+    Čiže dole pod formulár dáš nejaký <ul> zoznam a budeš doň pridávať <li> elementy z textom z formuláru.
+    V podstate to isté, čo vo videách ukazujem. 
+
+    Ale tu ide o to, že si musíš Vue vyskúšať, ohmatať, ovoňať osobne. 
+
+
+b; Vylepši
+
+    nech sa dá odosielať ENTEROM
+    ale LEN AK tam niečo napíšeš (aby sa nedal odoslať prázdny input)
+    keď stlačíš ESC, vymaže sa input (akože keď píšeš, ale zistíš, že píšeš blbosť, stlačíš ESC a všetko sa vymaže a môžeš písať znova)
+    pridaj x-ko vedľa položky v zozname, ktorým ju môžeš vymazať 
+
