@@ -17,12 +17,12 @@
 
         <h2>List of registered emails:</h2>
 
-        <ul>
-            <li v-for="email in emails" :key="email.id">
+        <transition-group name="email" tag="ul">
+            <li v-for="(email, index) in emails" :key="index">
                 <div class="email-item">{{ email }}</div>
                 <a class="remove" @click.prevent="remove(email)">x</a>
             </li>
-        </ul>
+        </transition-group>
     </div>
 
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>

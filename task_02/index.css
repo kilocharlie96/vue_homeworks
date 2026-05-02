@@ -59,3 +59,11 @@ li {
     width: 90%;
     display: inline-block;
 }
+
+.email-enter-active, .email-leave-active {
+    transition: all .20s;
+}
+.email-enter-from, .email-leave-to {
+    opacity: 0;
+    transform: scale(.75);
+}
