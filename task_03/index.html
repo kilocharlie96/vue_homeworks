@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css"
+    />
+    <link rel="stylesheet" href="index.css" />
+
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="card" id="app">
+      <div class="card-image">
+        <figure class="image is-4by3">
+          <img
+            src="https://bulma.io/assets/images/placeholders/1280x960.png"
+            alt="Placeholder image"
+          />
+        </figure>
+      </div>
+      <div class="card-content">
+        <strong v-show="stock < 4">Posledné {{stock}} kusy na sklade!</strong>
+        <div class="content">Počet kusov na sklade: {{ stock }}</div>
+        <div class="content">Počet kusov v košíku: {{ cart }}</div>
+      </div>
+      <footer class="card-footer">
+        <button
+          class="card-footer-item"
+          @click="stock--, cart++"
+          :disabled="stock <= 0"
+          :class="{'has-text-dark' : stock <=0 }"
+        >
+          Pridať do košíka
+        </button>
+
+        <button
+          class="card-footer-item"
+          @click="stock++, cart --"
+          :disabled="cart <= 0"
+          :class="{'has-text-dark' : cart <=0 }"
+        >
+          Odobrať z košíka
+        </button>
+      </footer>
+    </div>
+
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
+    <script>
+      const { createApp } = Vue;
+
+      createApp({
+        data() {
+          return {
+            stock: 10,
+            cart: 0,
+          };
+        },
+      }).mount("#app");
+    </script>
+  </body>
+</html>

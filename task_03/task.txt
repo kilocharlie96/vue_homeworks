@@ -1,0 +1,11 @@
+a) Vytvor <product> komponent
+
+    Bude evidovať počet kusov na sklade. 
+    Bude mať pridaj do košíka button.
+    Ten button bude disabled, keď počet klesne na (a pod) nulu.
+    Budeš môcť evidovať, či je produkt v akcii. Ak je, zobrazí sa nejaké "Akcia!" logo or whatever. 
+    Keď počet klesne pod 3, zobrazí sa "Zostávajú posledné kusy, kupuj rýchlo!" text.
+
+Môžeš na to použiť kód z týchto Bulma videí. 
+Akože ten Bulma card komponent. Alebo nemusíš. To je vedľajšie. O ten Vue kód ide.
+Skoro jak keby som o ňom kurz robil alebo niečo! (Big if true.)
