@@ -16,14 +16,13 @@
     <div class="card" id="app">
       <div class="card-image">
         <figure class="image is-4by3">
-          <img
-            src="https://bulma.io/assets/images/placeholders/1280x960.png"
-            alt="Placeholder image"
-          />
+          <img src="assets/card-title.jpg" alt="Placeholder image" />
         </figure>
       </div>
       <div class="card-content">
-        <strong v-show="stock < 4">Posledné {{stock}} kusy na sklade!</strong>
+        <span class="has-text-danger has-text-weight-bold" v-show="stock < 4"
+          >Posledné {{stock}} kusy na sklade!</span
+        >
         <div class="content">Počet kusov na sklade: {{ stock }}</div>
         <div class="content">Počet kusov v košíku: {{ cart }}</div>
       </div>
