@@ -19,7 +19,7 @@
           <img src="assets/card-title.jpg" alt="Placeholder image" />
         </figure>
       </div>
-      <div class="card-content">
+      <div class="card-content" :class="{'has-background-danger' : stock > 6}">
         <span class="has-text-danger has-text-weight-bold" v-show="stock < 4"
           >Posledné {{stock}} kusy na sklade!</span
         >

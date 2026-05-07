@@ -6,3 +6,7 @@ body {
 [disabled] {
   cursor: not-allowed;
 }
+
+.card.on-sale {
+  border: 1rem solid red;
+}
